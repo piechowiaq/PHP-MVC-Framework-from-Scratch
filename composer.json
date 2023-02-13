@@ -1,0 +1,15 @@
+{
+    "name": "barto/php-mvc-framework-from-scratch",
+    "autoload": {
+        "psr-4": {
+            "app\\": "./"
+        }
+    },
+    "authors": [
+        {
+            "name": "Bartosz Piechowiak",
+            "email": "piechowiaq@gmail.com"
+        }
+    ],
+    "require": {}
+}
