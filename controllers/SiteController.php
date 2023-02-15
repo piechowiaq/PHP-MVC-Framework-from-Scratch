@@ -2,10 +2,30 @@
 
 namespace app\controllers;
 
-class SiteController
+use app\core\Application;
+use app\core\Controller;
+use app\core\Request;
+
+class SiteController extends Controller
 {
-    public static function handleContact()
+    public function home()
     {
-        return "World";
+        $params = [
+            'name' => 'Bartosz',
+        ];
+
+        return $this->render('home', $params);
+    }
+
+    public function contact()
+    {
+        return $this->render('contact');
+    }
+
+    public function handleContact(Request $request)
+    {
+        $body = $request->getBody();
+
+        return $body;
     }
 }
