@@ -4,7 +4,7 @@
 <form action="" method="post">
     <div class="mb-3">
         <label for="exampleInputEmail1" class="form-label">Name</label>
-        <input type="text" class="form-control" id="name" aria-describedby="emailHelp">
+        <input type="text" class="form-control" id="name" name="name" aria-describedby="emailHelp">
         <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
     </div>
 
