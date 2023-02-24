@@ -23,12 +23,6 @@ abstract class DbModel extends Model
 
         }
 
-//
-//        echo "<pre>";
-//        var_dump($statement, $params, $attributes);
-//        echo "</pre>";
-//        exit;
-
         $statement->execute();
 
         return true;
@@ -37,9 +31,6 @@ abstract class DbModel extends Model
 
     public static function prepare($sql)
     {
-
-
-
         return Application::$app->db->pdo->prepare($sql);
     }
 }
