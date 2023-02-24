@@ -40,10 +40,6 @@ class Database
             $this->log("Applying migration $migration");
             $instance->up();
             $this->log("Applied migration $migration");
-//            echo '<pre>';
-//            var_dump($className);
-//            echo '</pre>';
-//            exit;
 
             $newMigrations[] = $migration;
 

@@ -93,4 +93,13 @@ abstract class Model
         return $this->errors[$attribute][0] ?? false;
     }
 
+    public function dd($value)
+    {
+        echo "<pre>";
+        var_dump($value);
+        echo "</pre>";
+
+        exit;
+    }
+
 }

@@ -14,7 +14,7 @@ class User extends DbModel
 
     public function tableName(): string
     {
-        return 'user';
+        return 'users';
 
     }
 
