@@ -31,11 +31,6 @@ class LoginForm extends Model
             return false;
         }
 
-        echo '<pre>';
-        var_dump($user);
-        echo '</pre>';
-        exit;
-
         Application::$app->login($user);
     }
 
