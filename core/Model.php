@@ -47,6 +47,7 @@ abstract class Model
 
                 if (!is_string($ruleName)) {
                     $ruleName = $rule[0];
+
                 }
 
                 if ($ruleName === self::RULE_REQUIRED && !$value) {
@@ -73,16 +74,16 @@ abstract class Model
                     $statement->bindValue(":attr", $value );
                     $statement->execute();
                     $record = $statement->fetchAll();
+
                     if ($record){
                         $this->addErrorForRule($attribute, self::RULE_UNIQUE, ['field'=> $this->getLabel($attribute)]);
                     }
+
                 }
             }
         }
 
         return empty($this->errors);
-
-
     }
 
     private function addErrorForRule(string $attribute, string $rule, $params = [])

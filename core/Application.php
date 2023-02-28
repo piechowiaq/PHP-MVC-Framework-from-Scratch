@@ -34,6 +34,8 @@ class Application
         if ($primaryValue){
             $primaryKey =  (new $this->userClass())->primaryKey();
             $this->user = (new $this->userClass())->findOne([$primaryKey => $primaryValue]);
+        } else {
+            $this->user = null;
         }
 
 
