@@ -37,9 +37,11 @@ class Application
         } else {
             $this->user = null;
         }
+    }
 
-
-
+    public static function isGuest()
+    {
+        return !self::$app->user;
     }
 
     public function run()
