@@ -2,6 +2,8 @@
 
 namespace app\core;
 
+use app\core\exception\NotFoundException;
+
 class Router
 {
     public Request $request;
@@ -25,6 +27,9 @@ class Router
         $this->routes['post'][$path] = $callback;
     }
 
+    /**
+     * @throws NotFoundException
+     */
     public function resolve()
     {
         $path = $this->request->getPath();
@@ -32,8 +37,8 @@ class Router
         $callback = $this->routes[$method][$path] ?? false;
 
         if ($callback === false){
-            $this->response->setStatusCode(404);
-            return $this->renderView("_404");
+
+            throw new NotFoundException();
 
         }
 
