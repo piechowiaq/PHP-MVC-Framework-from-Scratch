@@ -18,4 +18,19 @@ class ContactForm extends Model
             'body' => [self::RULE_REQUIRED],
         ];
     }
+
+    public function labels(): array
+    {
+        return [
+            'subject' => 'Enter your subject',
+            'email' => 'Your email',
+            'body' => 'Body',
+
+        ];
+    }
+
+    public function send()
+    {
+        return true;
+    }
 }
